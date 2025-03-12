@@ -1,1 +1,54 @@
 @use '../../style/scss/vars' as *;
+
+
+.category{
+    padding: 25px 22px 23px;
+    h4{
+        text-align: center;
+        text-transform: capitalize;
+    }
+    input{
+        background-color: $dark_1;
+        border-radius: 6px;
+        padding: 12px 5px 12px 24px;
+        color: $light_1;
+        margin-right: 20px;
+    }
+    .price::placeholder{
+        padding-left: 90px;
+    }
+    form{
+        padding-bottom: 60px;
+
+        button{
+            background-color: $main-light;
+            margin-left: 20px;
+            padding: 5px 15px;
+            font-size: 18px;
+            border-radius: 6px;
+        }
+    }
+    .products{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pagination{
+        padding: 40px 0 30px;
+        text-align: center;
+        button{
+            background-color: $main-light;
+            padding: 5px 15px;
+            font-size: 18px;
+            border-radius: 6px;
+            margin-right: 20px;
+        }
+
+        button:disabled{
+            background-color: $secondary_2;
+            cursor: default;
+        }
+    }
+}

@@ -28,9 +28,7 @@ const Header = () => {
             </Link>
             <div className={s.user}>
                 <img src={userIcon} alt="user" />
-                {!isUser? 
-                    <button>Log in</button>
-                    : <Link to={'/profile'}>{currentUser.name}</Link>}
+                <Link to={'/profile'}>{!isUser? 'Log in' : currentUser.name}</Link>
             </div>
             <div className={s.input}>
                 <img src={searchIcon} alt="Search" className={s.icon} />

@@ -89,6 +89,7 @@ const userSlice = createSlice({
         logOut: (state)=>{
             state.currentUser = {},
             state.isUser = false
+            storage.removeItem('TOKEN')
         }
     },
     extraReducers: (builder) => {
@@ -110,6 +111,9 @@ const userSlice = createSlice({
             state.currentUser = payload;
             state.isUser = true;
             state.authError = false;
+        })
+        builder.addCase(updateUser.fulfilled, (state, {payload})=>{
+            state.currentUser = {...state.currentUser, ...payload};
         })
     }
 })

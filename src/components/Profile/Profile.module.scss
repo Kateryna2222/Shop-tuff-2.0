@@ -1,0 +1,68 @@
+@use '../../style/scss/vars' as *;
+
+
+.profile{
+    height: 100%;
+    padding: 50px 30px 30px 30px;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .items{
+        flex-grow: 1;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .item{
+        width: 100%;
+        padding-bottom: 30px;
+
+        label{
+            display: block;
+            padding-bottom: 10px;
+        }
+        input{
+            display: block;
+            font-size: 15px;
+            padding: 10px 0 10px 30px;
+            width: 100%;
+            border-radius: 6px;
+            background-color: $secondary_1;
+            color: #fff;
+
+            &::placeholder{
+                color: #fff;
+            }
+        }
+    }
+
+    .btns{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        button, .logout{
+            text-align: center;
+            display: block;
+            width: 250px;
+            background-color: $main;
+            padding: 10px;
+            border-radius: 6px;
+
+            &:hover{
+                color: #fff;
+                background-color: $main-light;
+                transition: .3s;
+            }
+        }
+
+        .logout{
+            background-color: $secondary_2;
+        }
+    }
+}

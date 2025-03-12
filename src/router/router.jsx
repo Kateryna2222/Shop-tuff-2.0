@@ -8,7 +8,7 @@ import Home from "../pages/Home/Home";
 import Authorization from "../pages/Authorization/Authorization";
 import Busket from "../pages/Busket/Busket";
 import Favourite from "../pages/Favourite/Favourite";
-import Profile from "../pages/Profile/Profile";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import NotFound from "../pages/NotFound/NotFound";
 
 
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {path: '/auth', element: <Authorization />},
             {path: '/products/:id', element: <ProductPage/>},
             {path: `/categories/:id`, element: <CategoryPage/>},
-            {path: '/profile', element: <ProtectedRoute><Profile/></ProtectedRoute>},
+            {path: '/profile', element: <ProtectedRoute><ProfilePage/></ProtectedRoute>},
             {path: `/busket`,element: <ProtectedRoute><Busket/></ProtectedRoute>},
             {path: `/favourite`, element: <ProtectedRoute><Favourite/></ProtectedRoute>},
             {path: '*', element: <NotFound />},
