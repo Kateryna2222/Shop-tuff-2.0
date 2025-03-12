@@ -1,0 +1,28 @@
+@use '../../style/scss/vars' as *;
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding: 24px;
+    background-color: $dark_2;
+    margin-bottom: 24px;
+    border-radius: 6px;
+}
+
+.text{
+    color: $main;
+}
+
+.media{
+    display: flex;
+    gap: 16px;
+}
+
+
+.media__icon:hover *{
+    fill: #6C3EB8;
+    transition: .4s;
+}

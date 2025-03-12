@@ -1,0 +1,105 @@
+@use '../../style/scss/vars' as *;
+
+.banner{
+    width: 950px;
+    height: 100%;
+    padding: 42px 0 42px 42px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-image: url('../../images/added.png'); 
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 430px;
+        height: 320px;
+        bottom: -20px;
+        right: 0;
+    }
+}
+
+.text1{
+    font-weight: 900;
+    font-size: 5.5vw;
+    color: $dark_1;
+}
+.text2{
+    font-size: 16px;
+    color: $secondary_2;
+    padding: 40px 0 8px;
+}
+.text3{
+    font-weight: 700;
+    font-size: 42px;
+    max-width: 480px;
+    line-height: 50px;
+    padding-bottom: 24px;
+}
+
+.btn{
+    background-color: $main;
+    border-radius: 6px;
+    padding: 9px 20px;
+}
+
+.saleBanner{
+    height: 570px;
+    display: flex;
+
+    p{
+        color: $main;
+        font-weight: 300;
+    }
+
+
+    .info{
+        width: 50%;
+        padding: 75px 100px;
+        text-align: center;
+        position: relative;
+
+        &::before{
+            content: url('../../images/added\ 1.png');
+            position: absolute;
+            bottom: 100px;
+            left: -30px;
+        }
+
+
+        &::after{
+            content: url('../../images/added\ 2.png');
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+        }
+
+        .small{
+            font-size: 70px;
+        }
+        .big{
+            font-size: 150px;
+            padding-bottom: 40px;
+        }
+    }
+
+    .img{
+        background-image: url('../../images/sales\ img.jpg');
+        border-radius: 0 6px 6px 0;
+        width: 50%;
+        text-align: center;
+        display: flex;
+    }
+
+    .text{
+        font-size: 20px;
+        color: $dark_1;
+        padding: 24px;
+        align-self: flex-end;
+        margin: 0 auto;
+        span{
+            color: $main;
+        }
+    }
+}

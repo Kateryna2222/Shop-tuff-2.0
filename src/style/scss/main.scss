@@ -1,0 +1,64 @@
+@use 'vars' as *;
+
+
+body{
+    background-color: var(#{--background-color-default});
+    @extend %main-font;
+    font-weight: 500;
+    font-size: 14px;
+    color: $light_1;
+}
+
+button, a{
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.hide{
+    display: none;
+}
+
+html, body {
+    min-height: 100%; 
+}
+
+button{
+    background-color: inherit;
+}
+
+.container{
+    max-width: 1290px;
+    padding: 0 8px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    background-color: $dark_2;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+main{
+    flex-grow: 1;
+}
+
+
+.active{
+    color: #8B57C6;
+}
+
+a:hover{
+    @extend %hover-text;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+

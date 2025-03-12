@@ -1,0 +1,127 @@
+@use '../../style/scss/vars' as *;
+
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+    min-height: 600px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 81, 255, 0.5);
+    margin: 80px auto 0;
+}
+
+.formBox{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.login, .registration{
+
+    form{
+        background-color: var(#{--background-color-default});
+        padding: 90px 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 34px;
+        font-weight: 600;
+        padding-bottom: 60px;
+        color: $main;
+    }
+
+    .inputs{
+        flex-grow: 1;display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input{
+        border-bottom: 1px solid rgb(92, 89, 89);
+        font-size: 24px;
+        padding: 10px 20px;
+        border-radius: 6px;
+        margin-bottom: 30px;
+        color: $main;
+    }
+
+    button{
+        background-color: $main;
+        color: $light;
+        font-size: 24px;
+        padding: 10px;
+        max-width: 280px;
+        width: 100%;
+        border-radius: 6px;
+    }
+}
+
+// Toggle
+.toggleBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(#{--background-color-default});
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 300%;
+        height: 100%;
+        background-color: $main;
+        z-index: 5;
+        left: -250%;
+        border-radius: 160px;
+        transition: 0.8s ease-in-out;
+    }
+}
+
+.togglePanel{
+
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    color: $light;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 10;
+
+    h1{
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    p{
+        font-size: 24px;
+    }
+
+    button{
+        background-color: transparent;
+        padding: 10px 30px;
+        border: 1px solid $light;
+        border-radius: 6px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+

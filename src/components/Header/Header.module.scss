@@ -1,0 +1,103 @@
+@use '../../style/scss/vars' as *;
+
+
+
+.header{
+    padding: 0 20px;
+    margin: 20px 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: $light_2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    button:hover{
+        color: $main-light;
+        transition: .5s;
+    }
+}
+
+.input {
+    position: relative;
+    width: 300px;
+
+    .icon {
+        position: absolute;
+        top: 10px;
+        left: 14px;
+        z-index: 20;
+    }
+
+    input{
+        width: 100%;
+        border-radius: 6px;
+        padding: 7px 10px 10px 40px;
+        background-color: $dark_2;
+        color: inherit;
+        position: relative;
+        &::placeholder{
+            font-size: 11px;
+            font-weight: 400;
+            color: $light_2;
+        }
+    }
+}
+
+
+.choosed{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.header-choosed__active *{
+    fill: #6C3EB8;
+    stroke: #6C3EB8;
+}
+
+.themeColor{
+    font-size: 15px;
+    border-top: 1px solid $light;
+    border-bottom: 1px solid $light;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.busket{
+    position: relative;
+    &__count{
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: $main-light;
+        font-size: 9px;
+        border-radius: 50%;
+        font-weight: 700;
+        display: flex;
+        padding: 2px 0 0 3px;
+        right: 0;
+        bottom: 0px;
+    }
+}
+
+.isClose *{
+    stroke: $light_2;
+    fill: inherit;
+}
+
+.isCloseBusket *{
+    stroke: inherit;
+    fill: $light_2;
+}
+
+.isOpen *{
+    stroke: $main;
+    fill: $main;
+}
